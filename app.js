@@ -1,6 +1,10 @@
-const fs = require("fs")
 const Reader = require("./Reader")
 
 var reader = new Reader()
 
-reader.read("cargos.csv")
+async function main() {
+    var data = await reader.read("cargos.csv")
+    console.log(data)
+}
+
+main()
